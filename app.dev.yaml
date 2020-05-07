@@ -1,6 +1,6 @@
 runtime: php  # language of the app
 env: flex     # let app engine know we use flexible environment
-
+service: libri-dev
 resources:
   cpu: 1
   memory_gb: 0.5
