@@ -1,0 +1,16 @@
+runtime: php  # language of the app
+env: flex     # let app engine know we use flexible environment
+
+resources:
+  cpu: 2
+  memory_gb: 1.8
+  disk_size_gb: 10
+
+# AppEngine is charged based on cpu resources used.
+# To reduce cost, automatic scaling has to be enabled.
+automatic_scaling:
+  min_num_instances: 1 # sets minimum number of instance per version to 1
+  max_num_instances: 8 # sets maximum to 8
+  cool_down_period_sec: 120 # time it will take to forward traffic to scaled instance
+  cpu_utilization:
+    target_utilization: 0.8 # at 80% utilization of an instance, scaling takes place
