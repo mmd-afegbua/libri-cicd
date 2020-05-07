@@ -1,3 +1,5 @@
 dispatch:
-  - url: "example.com/*"
+  - url: "custom-domain-name.com/*"
     service: libri-prod
+
+# run gcloud app deploy dispatch.yaml to route traffic to prod     
